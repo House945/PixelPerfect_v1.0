@@ -1,0 +1,67 @@
+/* Theme */
+html {
+    font-size: 14px;
+    font-family: Raleway, Helvetica;
+}
+body, p {
+    margin: 0;
+}
+
+/* Utils */
+
+.d-flex {
+    display: flex;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+
+.grey {
+    background-color: #303030
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+nav {
+    padding: 20px 0px;
+}
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.nav-items {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    color: white;
+}
+.nav-items li {
+    cursor: pointer;
+    font-weight: 500 !important;
+    padding: .5rem 0;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 1.8rem;
+    border-bottom: 4px solid transparent;
+}
+.nav-items li:hover {
+    border-bottom: 4px solid #7c6b63;
+}
+.nav-items li:last-of-type {
+    margin-right: 0;
+}
+/* .nav-items li:nth-of-type(2) {
+    color: blue;
+}
+.nav-items li:nth-of-type(odd) {
+    color: blue;
+} */
