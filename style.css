@@ -35,7 +35,10 @@ a {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+.responsive {
+    width: 100%;
+    height: auto;
+  }
 
 /* Navigation */
 
@@ -113,6 +116,10 @@ nav {
     .nav-items {
         width: 60%;
     }
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
 }
 @media screen and (max-width:768px) {
     body{
@@ -165,6 +172,10 @@ nav {
         right: 25%;
         opacity: 1;
     }*/
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
 }
 .nav-active{
     transform: translateX(0%);
@@ -199,7 +210,6 @@ nav {
     position: relative;
     
 }
-
 .carousel-slide{
     
     display: flex;
@@ -208,7 +218,6 @@ nav {
     height: auto;
     max-height: 500px;
 }
-
 .carousel-caption{
     display: flex;
     align-items: center;
@@ -220,7 +229,6 @@ nav {
     right: 25%;
     opacity: 1;
 }
-
 #prevBtn{
     position: absolute;
     top: 50%;
@@ -235,7 +243,6 @@ nav {
     padding: 04px ;
     border-radius: 8px;
 }
-
 #nextBtn{
     position: absolute;
     top: 50%;
@@ -250,9 +257,8 @@ nav {
     padding: 04px ;
     border-radius: 8px;
 }
-
 #downloadBtn{
-    position: absolute;
+    position: inherit;
     top: 130%;
     z-index: 10;
     left:-20%;
@@ -262,5 +268,64 @@ nav {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: #140f08bb; background-blend-mode: 0.5; color: rgb(255, 255, 255); 
     padding: 14px 40px;
+    border-radius: 8px;
+}
+/*About Us*/
+.about{
+    padding-top: 4rem;
+	padding-bottom: 3rem;
+	text-align: center;
+    }
+.about h4{
+    font-size: 30px;
+    color: #7b6c63;
+    padding-bottom: 2rem;
+}
+.about p{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    padding-bottom: 1.5rem;
+}
+/*We are the best*/
+.we{
+    max-width: 1200px;
+    margin: 0 auto;
+	height: 350px;
+	background-color: #f5f5f5;
+    }
+
+.we h3{
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+    font-size: 25px;
+    color: #7b6c63;
+    padding-bottom: 2rem;
+}
+
+.we p{
+    padding-left: 2rem;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+.we img{
+    
+    width: 600px;
+    max-height: 350px;
+    position: absolute;
+    background-color: #f5f5f5;
+}
+#readBtn{
+    margin: 2rem;
+    
+    z-index: 10;
+    
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #f5f5f5; color: #302a27; 
+    padding: 7px 30px;
     border-radius: 8px;
 }
