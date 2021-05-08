@@ -67,4 +67,4 @@ carouselSlide.addEventListener('transitionend',()=>{
         counter = carouselImages.length - counter;
         carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
     }
-}) 
+})
