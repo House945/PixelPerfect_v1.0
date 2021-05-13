@@ -457,14 +457,59 @@ h2{
     
 }
 .square{
-    grid-area: overlap;
+    position: relative;
+    color: white;
+}   
+.square2{
+    display: none;
 }
-.smallsquare{
-    height: 50px;
-  width: 50px;
-  background-color: rgba(63, 63, 63, 0.747);
-  grid-area: overlap;
+
+.square img:hover +.square2 {
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    top: 47%;
+    
+    background-color: rgba(0, 0, 0, 0.664);
+    padding: 10px;
+    left: 50%;
+    z-index: 15;
+    transform: translate(-50%, -50%); 
 }
+
+.square2{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    top: 47%;
+    
+    background-color: rgba(0, 0, 0, 0.664);
+    padding: 10px;
+    left: 50%;
+    z-index: 15;
+    transform: translate(-50%, -50%); 
+}
+
+.square2 h5{
+    position: absolute;
+    font-size: 15px;
+    font-weight: 500;
+    top: 35%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);   
+}
+.square2 p{
+    position: absolute;
+    font-size: 13px;
+    font-weight: 300;
+    top: 70%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);   
+}
+
 .twitter {
     background-color: #1a1a1a;
     padding: 0px;
