@@ -360,6 +360,16 @@ h2{
     background-size: 1200px 300px;
     background-position-x: center;
 }
+.skills_baner{
+    
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.801);
+    
+    z-index: 15;
+    
+}
 .circles{
     display: flex;
     justify-content: space-around; 
@@ -428,12 +438,12 @@ h2{
 	text-align: center;
 }
 .recent h4{
-    font-size: 28px;
+    font-size: 1.75rem;
     color: #7b6c63;
     padding-bottom: 2rem;
 }
 .recent p{
-    font-size: 15px;
+    font-size: 1remx;
     font-weight: 400;
     color: black;
     padding-bottom: 1.5rem;
