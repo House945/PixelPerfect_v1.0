@@ -90,15 +90,6 @@ nav {
     border-bottom: 4px solid #7c6b63;
     text-decoration: none;
 }
-/*.nav-items li:last-of-type {
-    margin-right: 0;
-}
-/* .nav-items li:nth-of-type(2) {
-    color: blue;
-}
-.nav-items li:nth-of-type(odd) {
-    color: blue;
-} */
 .burger{
     display: none;
     cursor: pointer;
@@ -116,23 +107,44 @@ nav {
     .nav-items {
         width: 60%;
     }
+    p{
+        padding: 0.5rem;
+    }
     .responsive {
         max-width: 100%;
         height: auto;
     }
+    .read{
+        display: none;
+    }
+    .we p{
+        
+        margin: auto;
+        padding: 0.5rem;
+    }
+    .we h3{
+        
+        margin: auto;
+        padding: 0.5rem;
+    }
 }
 @media screen and (max-width:768px) {
     body{
-        overflow-x: hidden;
-        
+        overflow-x: hidden;   
+    }
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
+    p{
+        padding: 0.5rem;
     }
     .nav-items{
         z-index: 15;
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 8vh;
-        
+        top: 8vh; 
         margin-top: 0;
         background-color: #303030;
         display: flex;
@@ -149,32 +161,26 @@ nav {
     .burger{
         display: block;
     }
-    /*jeszcze nie działa*/
-    /*.carousel-container{
-        width: 30%;
-        
-        border: 0px solid black;
-        overflow: hidden;
-        position: relative;
-        
+    .we{
+        grid-template-columns: repeat(auto-fit, minmax(768px, 1fr));
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
     }
-    .carousel-slide{
-        width: 30%;
-        height: 100px;
+    .we p{
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding: 0.5rem;
     }
-    .carousel-caption{
-        align-items: center;
-        justify-content: space-around ;
-        position: absolute;
-        top: 40%;
-        z-index: 5;
-        left: 25%;
-        right: 25%;
-        opacity: 1;
-    }*/
-    .responsive {
-        max-width: 100%;
-        height: auto;
+    .we h3{
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        padding: 0.5rem;
+    }
+    .read{
+        display: none;
     }
 }
 .nav-active{
@@ -190,7 +196,6 @@ nav {
         transform: translateX(0px);
     }
 }
-
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
@@ -200,7 +205,6 @@ nav {
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
-
 /*Carousel*/
 .carousel-container{
     width: 1200px;
@@ -208,12 +212,9 @@ nav {
     border: 0px solid black;
     overflow: hidden;
     position: relative;
-    
 }
 .carousel-slide{
-    
     display: flex;
-    
     max-width: 100%;
     height: auto;
     max-height: 500px;
@@ -289,22 +290,29 @@ nav {
 }
 /*We are the best*/
 .we{
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    background-color:#f5f5f5;;
+    padding-left: 9.375rem;
+    padding-right: 9.375rem;
+    grid-gap: 0px; 
+    padding: 0px;
     margin: 0 auto;
 	height: 350px;
 	background-color: #f5f5f5;
 }
 .we h3{
-    padding-top: 3.5rem;
+    padding-top: 3rem;
     padding-left: 2rem;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #7b6c63;
     padding-bottom: 2rem;
     text-align: left;
 }
 .we p{
     padding-left: 2rem;
-    font-size: 15px;
+    font-size: 0.938rem;
     font-weight: 400;
     color: black;
     text-align: left;
@@ -312,14 +320,14 @@ nav {
 .we img{
     width: 600px;
     max-height: 350px;
-    position: absolute;
+    position: relative;
     background-color: #f5f5f5;
+    margin-right: 50%;
 }
 #readBtn{
-    margin: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin: 2rem;
     z-index: 10;
-    font-size: 15px;
+    font-size: 0.938rem;
     color: rgb(255, 255, 255);
     cursor: pointer;
     background-color: #f5f5f5; color: #302a27; 
@@ -330,14 +338,14 @@ nav {
 h3{
     padding-top: 3.5rem;
     padding-left: 2rem;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #7b6c63;
     padding-bottom: 2rem;
     text-align: center;
 }
 .icons p{
     padding-left: 2rem;
-    font-size: 15px;
+    font-size: 0.938rem;
     font-weight: 400;
     color: rgba(99, 99, 99, 0.788);
     text-align: center;
@@ -345,7 +353,7 @@ h3{
 h2{
     padding-top: 3.5rem;
     padding-left: 2rem;
-    font-size: 15px;
+    font-size: 0.938rem;
     color: #7b6c63;
     padding-bottom: 2rem;
     text-align: center;
@@ -370,7 +378,6 @@ h2{
     display: flex;
     justify-content: space-around; 
 }
-
 .circle {
     -moz-border-radius: 120px/120px;
     -webkit-border-radius: 120px 120px;
@@ -388,7 +395,7 @@ h2{
     justify-content: space-around ; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 .circle2 {
     -moz-border-radius: 100px/100px;
@@ -411,13 +418,13 @@ h2{
     justify-content: space-between ; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    font-size: 12px;
+    font-size: 0.75rem;
     padding: 30px;
 }
 .skills h3{
     padding-top: 3.5rem;
     padding-left: 0px;;
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: white;
     padding-bottom: 2rem;
     text-align: center;
@@ -446,12 +453,10 @@ h2{
     background-color:white;
     padding: 0px;
 }
-  
 .grid-container > div {
-    /*background-color: #1a1a1a;*/
     border: 0px ;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875rem;
     margin: 0px;
     padding: 0px;
 }
@@ -462,7 +467,6 @@ h2{
 .square2{
     display: none;
 }
-
 .square img:hover +.square2 {
     display: block;
     position: absolute;
@@ -505,20 +509,19 @@ h2{
     color: white;
     padding-bottom: 2rem;
 }
-
+/*TWITTER*/
 .twitter h3{
     padding-top: 1.5rem;
     padding-left: 0rem;
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: white;   
 }
 .twitter p{
-    font-size: 1.2vw;
+    font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.603);
     padding-bottom: 1.5rem;
 }
-
 #seeBtn{  
     z-index: 10;
     font-size: 15px;
@@ -528,6 +531,7 @@ h2{
     padding: 7px 30px;
     border-radius: 1px;
 }
+/*OUR TEAM MEMBERS*/
 .team{
     padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -552,48 +556,49 @@ h2{
     grid-template-columns: auto auto auto;
     grid-gap: 15px;
     background-color:#f5f5f5;;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 9.375rem;
+    padding-right: 9.375rem;
 }
 .square3{
     display: none;
 }
-
 .square img:hover +.square3 {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 50%;
-    
     background-color: rgba(0, 0, 0, 0.801);
     padding: 10px;
     left: 50%;
+    right: 50%;
     z-index: 15;
     transform: translate(-50%, -50%); 
 }
 .square3 h5{
     position: absolute;
-    font-size: 15px;
+    font-size: 0.938rem;
     font-weight: 500;
     top: 35%;
     left: 50%;
+    right: 50%;
     z-index: 5;
     transform: translate(-50%, -50%);   
 }
 .square3 p{
     position: absolute;
-    font-size: 13px;
+    font-size: 0.813rem;
     font-weight: 300;
     top: 70%;
     left: 50%;
+    right: 50%;
     z-index: 5;
     transform: translate(-50%, -50%);   
 }
 .fb{
     display: grid;
     grid-template-columns: auto auto auto ;
-    grid-gap: 15px;
+    grid-gap: 0.938rem;
     position: absolute;
     top: 45%;
     left: 25%;
@@ -608,17 +613,18 @@ h2{
     text-align: center;
     top: 50%;
     left: 50%;
+    right: 50%;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     border-style: groove;
 }
-
 .name_tag h6{
-    font-size: 1.25vw;
+    font-size: 0.938rem;
     font-weight: 500;
-    padding: 2px;
+    padding: 0.125rem;
 }
 .name_tag p{
-    font-size: 0.65vw;
+    font-size: 0.813rem;
     font-weight: 300;
+    padding: 0.125rem;
 }
