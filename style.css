@@ -29,10 +29,11 @@ a {
 }
 
 .grey {
-    background-color: #303030
+    background-color: #303030;
+    max-width:100%;
 }
 .container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 .responsive {
@@ -48,6 +49,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
+    width: 100%;
 }
 .logo {
     color: white;
@@ -57,24 +59,23 @@ nav {
 }
 .logo img {
     padding: 10px;
-    width: 10rem;
+    width: 160px;
     height: auto;
 }
 .nav-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
     text-decoration: none;
-    margin: 0;
-    padding-left: 0;
+    margin: 0.625rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
     color: white;
-    max-width: 50%;
 }
 .nav-items a{
     color: white;
     text-decoration: none;
     letter-spacing: 3px;
-
 }
 .nav-items li {
     cursor: pointer;
@@ -82,7 +83,8 @@ nav {
     padding: .5rem 0;
     display: inline-block;
     text-transform: uppercase;
-    margin-right: 1.8rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
     border-bottom: 4px solid transparent;
     
 }
@@ -104,11 +106,21 @@ nav {
 }
 /*responsive*/
 @media screen and (max-width:1024px) {
+    body{
+        overflow-x: hidden;
+    }
+    .logo img {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        width: 160px;
+        height: auto;
+    }
     .nav-items {
-        width: 60%;
+        width: 85%;
+        justify-content: space-around;
     }
     p{
-        padding: 0.5rem;
+        padding: 0.25rem;
     }
     .responsive {
         max-width: 100%;
@@ -151,10 +163,10 @@ nav {
         width: 35%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        margin: 0;
     }
     .nav-items li{
         opacity: 0;
-        margin-right: 1rem;
     }
     .burger{
         display: block;
@@ -168,7 +180,7 @@ nav {
     .we p{
         text-align: center;
         justify-content: center;
-        margin: auto;
+        margin: 0;
         padding: 0.5rem;
     }
     .we h3{
@@ -203,58 +215,68 @@ nav {
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
-/*Carousel*/
-.carousel-container{
-    width: 1200px;
-    margin: auto;
-    border: 0px solid black;
+/*-------------------------*/
+.carousel{
+    position:relative;
     overflow: hidden;
-    position: relative;
-}
-.carousel-slide{
-    display: flex;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100vh;
     max-height: 500px;
 }
-.carousel-caption{
-    display: flex;
-    align-items: center;
-    justify-content: space-around ;
+.carousel .slider{
     position: absolute;
-    top: 40%;
-    z-index: 5;
-    left: 25%;
-    right: 25%;
-    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    animation: animate 10s linear infinite;
 }
-#prevBtn{
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    left: 5%;
-    font-size: 10px;
-    color: white;
-    opacity: 0.9;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #140f08bb; background-blend-mode: 0.5; color: rgb(255, 255, 255); 
-    padding: 04px ;
-    border-radius: 8px;
+.carousel .slider .slide{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: left;
 }
-#nextBtn{
+.carousel .slider .slide .caption{
     position: absolute;
-    top: 50%;
-    z-index: 10;
-    right: 5%;
-    font-size: 10px;
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+.carousel .slider .slide .caption h2{
+    margin: 0 0 20px;
+    padding: 0;
     color: white;
-    opacity: 0.9;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #140f08bb; background-blend-mode: 0.5; color: rgb(255, 255, 255);
-    padding: 04px ;
-    border-radius: 8px;
+    font-size: 48px;
+}
+.carousel .slider .slide .caption p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+}
+.carousel .slider .slide.slide1{
+    background: url("images/Layer1.png");
+    background-size: cover;
+    background-position: center;
+}
+.carousel .slider .slide.slide2{
+    background: url(images/Layer2.png);
+    background-size: cover;
+    background-position: center;
+}
+.carousel .slider .slide.slide3{
+    background: url(images/Layer3.png);
+    background-size: cover;
+    background-position: center;
+}
+.carousel .slider .slide.slide4{
+    background: url(images/Layer4.jpg);
+    background-size: cover;
+    background-position: center;
 }
 #downloadBtn{
     position: inherit;
@@ -269,6 +291,59 @@ nav {
     padding: 14px 40px;
     border-radius: 8px;
 }
+@keyframes animate{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+@media (max-width:768px){
+    .carousel .slider .slide .caption{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 20px;
+        
+    }
+    .carousel .slider .slide .caption h2{
+        margin: 0 0 10px;
+        
+        font-size: 30px;
+    }
+    .carousel .slider .slide .caption p{
+        
+        font-size: 16px;
+    }
+}
+/*-------------------------*/
+
+
+
+
 /*About Us*/
 .about{
     padding-top: 4rem;
@@ -696,7 +771,7 @@ form{
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(128, 128, 128);
     color: #423b37;
     font-size: 18px;
     margin-bottom: 16px;
@@ -790,6 +865,9 @@ form .submit:hover{
 }
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #494949;
+    
 }
 
 .footer-col ul li{
