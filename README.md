@@ -2,5 +2,4 @@
 PixelPerfect_v1.0 project_v1  
  
 <!-- UPDATE: CIRCLES :) -->
-<!-- UPDATE: JS ADV COURSE #2 -->
-<!-- ale za to 3 lekcyjki weszly-->
+<!-- UPDATE: JS ADV COURSE #3 -->
