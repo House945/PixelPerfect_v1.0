@@ -7,5 +7,4 @@ x css grid where needed
 x circles into proper places
 x carousel - Twitter section
 x to be continued
-x yes
 -->
