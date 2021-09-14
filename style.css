@@ -259,22 +259,22 @@ nav {
     font-size: 18px;
 }
 .carousel .slider .slide.slide1{
-    background: url("images/Layer1.png");
+    background: url("images/Layer1.jpg");
     background-size: cover;
     background-position: center;
 }
 .carousel .slider .slide.slide2{
-    background: url(images/Layer2.png);
+    background: url("images/Layer2.jpg");
     background-size: cover;
     background-position: center;
 }
 .carousel .slider .slide.slide3{
-    background: url(images/Layer3.png);
+    background: url("images/Layer3.jpg");
     background-size: cover;
     background-position: center;
 }
 .carousel .slider .slide.slide4{
-    background: url(images/Layer4.jpg);
+    background: url("images/Layer4.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -631,21 +631,22 @@ h2{
     padding-left: 9.375rem;
     padding-right: 9.375rem;
 }
-.square3{
-    display: none;
-}
+
 .square img:hover +.square3 {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 50%;
-    background-color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(0, 0, 0, 0.76);
     padding: 10px;
     left: 50%;
     right: 50%;
     z-index: 15;
     transform: translate(-50%, -50%); 
+}
+.square3{
+    display: none;
 }
 .square3 h5{
     position: absolute;
@@ -745,7 +746,7 @@ h2{
   border-radius: 50%;
   border: 8px solid #ebebeb;
   background-color: #7b6c63;
-  
+  cursor: pointer;
 }
 /*CONTACT FORM*/
 .contact-form{
