@@ -54,7 +54,6 @@ prevBtn.addEventListener('click',()=>{
     counter--;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
 });
-
 carouselSlide.addEventListener('transitionend',()=>{
     
     if(carouselImages[counter].id === 'lastClone'){
